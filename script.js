@@ -22,12 +22,12 @@ document.getElementById("submit").addEventListener("click", function () {
   // Get values from input fields
   const name = document.getElementById("name").value;
   const dob = document.getElementById("dob").value;
-  const age = calculateAge(dob);
   const gender = document.getElementById("gender").value;
   const caste = document.getElementById("caste").value;
   const selectedClass = document.getElementById("class").value;
   const enrollmentDate = document.getElementById("Edate").value;
   const dropoutDate = document.getElementById("dropDate").value;
+  const age = calculateAge(dob,dropoutDate);
 
   // Get values from checkboxes (dropout reasons)
   const selectedReasons = [];
@@ -71,15 +71,18 @@ document.getElementById("submit").addEventListener("click", function () {
     });
 });
 
-function calculateAge(dob) {
+function calculateAge(dob, dropoutDate) {
   const dobDate = new Date(dob);
-  const currentDate = new Date(dropoutDate);
+  const dropoutDateObj = new Date(dropoutDate);
 
-  const yearsDiff = currentDate.getFullYear() - dobDate.getFullYear();
-  const currentMonth = currentDate.getMonth();
+  const yearsDiff = dropoutDateObj.getFullYear() - dobDate.getFullYear();
+  const currentMonth = dropoutDateObj.getMonth();
   const dobMonth = dobDate.getMonth();
 
-  if (currentMonth < dobMonth || (currentMonth === dobMonth && currentDate.getDate() < dobDate.getDate())) {
+  if (
+    currentMonth < dobMonth ||
+    (currentMonth === dobMonth && dropoutDateObj.getDate() < dobDate.getDate())
+  ) {
     return yearsDiff - 1; // Subtract 1 if the birthday hasn't occurred yet this year
   }
 
