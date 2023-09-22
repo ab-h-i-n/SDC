@@ -106,3 +106,29 @@ function clearInputFields() {
   document.getElementById("area").value = "";
   document.getElementById("noS").value = "";
 }
+
+const schoolsData = {
+  "area X": ["School A", "School B"],
+  "area Y": ["School C", "School D"],
+  "area Z": ["School E", "School F"],
+  "area W": ["School G", "School H"]
+};
+
+const areaSelect = document.getElementById("area");
+const schoolSelect = document.getElementById("sname");
+
+areaSelect.addEventListener("change", function () {
+  const selectedArea = areaSelect.value;
+  const schoolsInArea = schoolsData[selectedArea] || [];
+
+  // Clear the previous options
+  schoolSelect.innerHTML = '<option value="">Select</option>';
+
+  // Populate the school select with options based on the selected area
+  schoolsInArea.forEach((school) => {
+    const option = document.createElement("option");
+    option.value = school;
+    option.textContent = school;
+    schoolSelect.appendChild(option);
+  });
+});
