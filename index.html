@@ -1,1 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Student Data Collection</title>
+</head>
+<body>
+    <header>
+        <h1>Student Data Collection</h1>
+    </header>
 
+    <main>
+        <div class="pd">
+            <h3>Student details :</h3>
+            <div class="data">
+                <div>
+                    <label>Name : </label>
+                <input type="text" id="name">
+                </div>
+                <div>
+                    <label>Date of Birth : </label>
+                <input type="date" id="date">
+                </div>
+                <div>
+                <label>Gender : </label>
+                <input type="radio" id="gender" name="gender" value="M">
+                <label >Male</label>
+                <input type="radio" id="gender" name="gender" value="F">
+                <label>Female</label>
+                </div>
+                <div>
+                    <label >Caste : </label>
+                    <select name="caste" id="caste">
+                        <option selected>Select</option>
+                        <option value="h">Hindu</option>
+                        <option value="h">Muslim</option>
+                        <option value="h">Christian</option>
+                    </select>
+                </div>
+                <div>
+                    <label>Class/Grade : </label>
+                    <input type="text" id="class">
+                    </div>
+                    <div>
+                        <label>Enrollment Date : </label>
+                        <input type="date" id="Edate">
+                     </div>
+                     <div>
+                        <label>Dropout Date : </label>
+                        <input type="date" id="dropDate">
+                     </div>
+                     <div>
+                        <label>Dropout Reason : </label>
+                        <br>
+                        <input type="checkbox" id="res" name="res" value="fin">
+                        <label>Financial Constraints</label><br>
+                        <input type="checkbox" id="res" name="res" value="fin">
+                        <label>Family Responsibilties</label><br>
+                        <input type="checkbox" id="res" name="res" value="fin">
+                        <label>Health issues</label><br>
+                        <input type="checkbox" id="res" name="res" value="fin">
+                        <label>Academin Struggles</label><br>
+                        <input type="checkbox" id="res" name="res" value="fin">
+                        <label>Lack of Interest</label><br>
+                        <input type="checkbox" id="res" name="res" value="fin">
+                        <label>Personal choice</label><br>
+                     </div>
+            </div>
+        </div>
+
+        <div class="sd">
+            <h3>School/College details :</h3>
+            <div class="data">
+                <div>
+                <label>School/College Name : </label>
+                <input type="text" id="sname">
+                </div>
+                <div>
+                    <label>School/College Area : </label>
+                    <input type="text" id="">
+                    </div>
+                
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div id="submit">Sumbit</div>
+    </footer>
+<script type="module" src="./script.js"></script>
+</body>
+</html>
