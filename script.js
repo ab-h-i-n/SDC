@@ -39,7 +39,6 @@ document.getElementById("submit").addEventListener("click", function () {
   // Get values from school details
   const schoolName = document.getElementById("sname").value;
   const schoolArea = document.getElementById("area").value;
-  const totalStudents = document.getElementById("noS").value;
 
   // Create a data object
   const data = {
@@ -54,7 +53,6 @@ document.getElementById("submit").addEventListener("click", function () {
     dropoutReasons: selectedReasons,
     schoolName: schoolName,
     schoolArea: schoolArea,
-    totalStudents: totalStudents,
   };
 
   // Add data to the Firebase Realtime Database
@@ -75,7 +73,7 @@ document.getElementById("submit").addEventListener("click", function () {
 
 function calculateAge(dob) {
   const dobDate = new Date(dob);
-  const currentDate = new Date();
+  const currentDate = new Date(dropoutDate);
 
   const yearsDiff = currentDate.getFullYear() - dobDate.getFullYear();
   const currentMonth = currentDate.getMonth();
