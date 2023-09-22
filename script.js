@@ -110,8 +110,7 @@ function clearInputFields() {
 const schoolsData = {
   "area X": ["School A", "School B"],
   "area Y": ["School C", "School D"],
-  "area Z": ["School E", "School F"],
-  "area W": ["School G", "School H"]
+  "area Z": ["School E", "School F"]
 };
 
 const areaSelect = document.getElementById("area");
