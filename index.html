@@ -21,27 +21,38 @@
                 </div>
                 <div>
                     <label>Date of Birth : </label>
-                <input type="date" id="date">
+                <input type="date" id="dob">
                 </div>
                 <div>
                 <label>Gender : </label>
-                <input type="radio" id="gender" name="gender" value="M">
-                <label >Male</label>
-                <input type="radio" id="gender" name="gender" value="F">
-                <label>Female</label>
+                <select name="gender" id="gender">
+                    <option selected>Select</option>
+                    <option value="M">Male</option>
+                    <option value="F">Female</option>
+                </select>
                 </div>
                 <div>
                     <label >Caste : </label>
                     <select name="caste" id="caste">
                         <option selected>Select</option>
                         <option value="h">Hindu</option>
-                        <option value="h">Muslim</option>
-                        <option value="h">Christian</option>
+                        <option value="m">Muslim</option>
+                        <option value="c">Christian</option>
                     </select>
                 </div>
                 <div>
-                    <label>Class/Grade : </label>
-                    <input type="text" id="class">
+                    <label>Class : </label>
+                    <select name="class" id="class">
+                        <option selected>Select</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                    </select>
                     </div>
                     <div>
                         <label>Enrollment Date : </label>
@@ -54,32 +65,36 @@
                      <div>
                         <label>Dropout Reason : </label>
                         <br>
-                        <input type="checkbox" id="res" name="res" value="fin">
+                        <input type="checkbox" id="res" name="res" value="Financial Constraints">
                         <label>Financial Constraints</label><br>
-                        <input type="checkbox" id="res" name="res" value="fin">
+                        <input type="checkbox" id="res" name="res" value="Family Responsibilties">
                         <label>Family Responsibilties</label><br>
-                        <input type="checkbox" id="res" name="res" value="fin">
+                        <input type="checkbox" id="res" name="res" value="Health issues">
                         <label>Health issues</label><br>
-                        <input type="checkbox" id="res" name="res" value="fin">
+                        <input type="checkbox" id="res" name="res" value="Academin Struggles">
                         <label>Academin Struggles</label><br>
-                        <input type="checkbox" id="res" name="res" value="fin">
+                        <input type="checkbox" id="res" name="res" value="Lack of Interest">
                         <label>Lack of Interest</label><br>
-                        <input type="checkbox" id="res" name="res" value="fin">
+                        <input type="checkbox" id="res" name="res" value="Personal choice">
                         <label>Personal choice</label><br>
                      </div>
             </div>
         </div>
 
         <div class="sd">
-            <h3>School/College details :</h3>
+            <h3>School details :</h3>
             <div class="data">
                 <div>
-                <label>School/College Name : </label>
+                <label>School Name : </label>
                 <input type="text" id="sname">
                 </div>
                 <div>
-                    <label>School/College Area : </label>
-                    <input type="text" id="">
+                    <label>School Area : </label>
+                    <input type="text" id="area">
+                </div>
+                <div>
+                    <label>Total Number of students : </label>
+                    <input type="text" id="noS">
                     </div>
                 
             </div>
@@ -89,6 +104,8 @@
     <footer>
         <div id="submit">Sumbit</div>
     </footer>
+<script type="module" src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js"></script>
+<script type="module" src="https://www.gstatic.com/firebasejs/9.0.0/firebase-database.js"></script>
 <script type="module" src="./script.js"></script>
 </body>
 </html>
