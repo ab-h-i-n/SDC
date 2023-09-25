@@ -67,7 +67,7 @@ document.getElementById("submit").addEventListener("click", function () {
       clearInputFields();
     })
     .catch(function (error) {
-      alert("Error adding data to the database:", error);
+      
     });
 });
 
